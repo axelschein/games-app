@@ -15,20 +15,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import Image from '../../assets/wallpaper.jpg'
 import { newTheme } from './styles'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function Copyright(props: any) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
 
 const LogIn = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -119,7 +105,6 @@ const LogIn = () => {
                   </Link>
                 </Grid>
               </Grid>
-              <Copyright sx={{ mt: 5 }} />
             </Box>
           </Box>
         </Grid>
