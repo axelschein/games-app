@@ -11,8 +11,9 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import Image from '../../assets/wallpaper.jpg'
+import { newTheme } from './styles'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Copyright(props: any) {
@@ -28,8 +29,6 @@ function Copyright(props: any) {
   );
 }
 
-// // TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
 
 const LogIn = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -42,7 +41,7 @@ const LogIn = () => {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={newTheme}>
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid
