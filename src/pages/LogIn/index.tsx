@@ -14,9 +14,11 @@ import Typography from '@mui/material/Typography';
 import { ThemeProvider } from '@mui/material/styles';
 import Image from '../../assets/wallpaper.jpg'
 import { newTheme } from './styles'
+import { LogInProps } from './types';
 
 
-const LogIn = () => {
+const LogIn = ({ handleLogIn }: LogInProps) => {
+  
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -24,6 +26,7 @@ const LogIn = () => {
       email: data.get('email'),
       password: data.get('password'),
     });
+    handleLogIn();
   };
 
   return (
