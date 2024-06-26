@@ -13,7 +13,10 @@ function App() {
   return (
     <>
       {canAccess ? 
-      <><NavBar /><ColorPicker /></> 
+      <>
+        <NavBar />
+        <ColorPicker />
+      </> 
       : <LogIn handleLogIn={handleLogIn} />}
     </>
   )
